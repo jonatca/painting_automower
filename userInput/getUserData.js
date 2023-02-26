@@ -1,22 +1,21 @@
+import {
+  ctx,
+  margin,
+  penalty_area_width,
+  penalty_area_height,
+  goal_box_width,
+  goal_box_height,
+  corner_arc_radius,
+  center_circle_radius,
+  penalty_dot,
+  penalty_arc_radius,
+  theta,
+} from "./pixel_constants.js";
 const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-// Set canvas width and height to match the viewport
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
-const margin = 100; // 50 pixels margin
 const center_x = canvas.width / 2;
 const center_y = canvas.height / 2;
-const penalty_area_width = 200;
-const penalty_area_height = 300;
-const goal_box_width = 50;
-const goal_box_height = 100;
-const corner_arc_radius = 40;
-const center_circle_radius = 75;
-const penalty_dot = 100;
-const penalty_arc_radius = 125;
-const theta = 36 * (Math.PI / 180);
 
 function textInput(
   x,
@@ -27,10 +26,10 @@ function textInput(
   offset = 30,
   size = 100
 ) {
-  x_input = x - size / 2;
-  x_label = x - size / 2;
-  y_input = y - offset;
-  y_label = y - 1.7 * offset;
+  let x_input = x - size / 2;
+  let x_label = x - size / 2;
+  let y_input = y - offset;
+  let y_label = y - 1.7 * offset;
   if (rotation === -90) {
     x_input = x - 2.5 * offset;
     x_label = x - 2.5 * offset - 33;
@@ -165,7 +164,6 @@ function nextButton() {
     savePaintDimensionsToJson();
   });
 }
-console.log("nextButton");
 // Draw green background
 ctx.fillStyle = "#008000";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -284,7 +282,7 @@ ctx.closePath();
 
 nextButton();
 function savePaintDimensionsToJson() {
-  paintDimensions = {
+  var paintDimensions = {
     shortside: shortside.value,
     longside: longside.value,
     penaltyAreaHeight: penaltyAreaHeight.value,
@@ -297,7 +295,6 @@ function savePaintDimensionsToJson() {
     penaltyArcRadius: penaltyArcRadius.value,
   };
   console.log(paintDimensions["penaltyAreaHeight"].value);
-  const jsonString = JSON.stringify(paintDimensions);
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "http://localhost:8000/save", true);
   xhr.setRequestHeader("Content-Type", "application/json");
