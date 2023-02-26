@@ -1,0 +1,40 @@
+canvas {
+  border: 1px solid #000;
+}
+
+button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2E8B57;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+input {
+  font-size: 14px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+#penalty-width-input + div {
+    margin-bottom: 10px;
+  }
