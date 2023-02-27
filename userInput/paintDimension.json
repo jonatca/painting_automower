@@ -8,5 +8,6 @@
   "penaltyDotLength": "11",
   "centerCircleDiameter": "9.15",
   "cornerArcRadius": "1",
-  "penaltyArcRadius": "9.15"
+  "penaltyArcRadius": "9.15",
+  "numCombLines": "20"
 }
