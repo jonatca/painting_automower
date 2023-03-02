@@ -1,4 +1,4 @@
-export function nextButton() {
+export function submitButton() {
   const button = document.createElement("button");
   button.innerHTML = "Submit";
   button.style.position = "absolute";

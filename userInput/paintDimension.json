@@ -1,13 +1,1 @@
-{
-  "shortside": "65",
-  "longside": "105",
-  "penaltyAreaHeight": "16.5",
-  "penaltyAreaWidth": "40.3",
-  "goalBoxHeight": "5.5",
-  "goalBoxWidth": "18.3",
-  "penaltyDotLength": "11",
-  "centerCircleDiameter": "9.15",
-  "cornerArcRadius": "1",
-  "penaltyArcRadius": "9.15",
-  "numCombLines": "20"
-}
+{"shortside": "65", "longside": "105", "penaltyAreaHeight": "16.5", "penaltyAreaWidth": "40.3", "goalBoxHeight": "5.5", "goalBoxWidth": "18.3", "penaltyDotLength": "11", "centerCircleDiameter": "9.15", "cornerArcRadius": "1", "penaltyArcRadius": "9.15", "numCombLines": "20"}
